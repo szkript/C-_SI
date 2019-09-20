@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CreateClass {
     class Person {
-        string Name;
-        int BirthDate;
-        Gender Gender;
+        protected string Name;
+        protected int BirthDate;
+        protected Gender Gender;
 
         public Person(string Name, int BirthDate, Gender Gender) {
             this.Name = Name;
