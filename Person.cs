@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CreateClass {
     class Person {
-        protected string Name { get; set; }
-        protected int BirthDate { get; set; }
-        protected Gender Gender;
+        private string Name { get; set; }
+        private int BirthDate { get; set; }
+        private Gender Gender;
 
-        public Person(string Name, int BirthDate, Gender Gender) {
-            this.Name = Name;
-            this.BirthDate = BirthDate;
-            this.Gender = Gender;
+        protected Person(string name, int birthDate, Gender gender) {
+            this.Name = name;
+            this.BirthDate = birthDate;
+            this.Gender = gender;
 
         }
 

@@ -8,10 +8,12 @@ namespace CreateClass
 {
     class Employee : Person
     {
-        Room Room;
+        private string profession;
+        Room room;
 
-        public Employee(string Name, int BirthDate, Gender Gender) : base(Name, BirthDate, Gender)
+        public Employee(string name, int birthDate, Gender gender, string profession) : base(name, birthDate, gender)
         {
+            this.profession = profession;
         }
     }
 }
