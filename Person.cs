@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CreateClass {
     class Person {
-        protected string Name;
-        protected int BirthDate;
+        protected string Name { get; set; }
+        protected int BirthDate { get; set; }
         protected Gender Gender;
 
         public Person(string Name, int BirthDate, Gender Gender) {

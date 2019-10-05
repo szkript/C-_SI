@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreateClass {
+namespace CreateClass
+{
+    class Employee : Person
+    {
+        Room Room;
 
-
-    class Employee : Person {
-
-        public Employee(string Name, int BirthDate, Gender Gender) : base(Name, BirthDate, Gender) {
+        public Employee(string Name, int BirthDate, Gender Gender) : base(Name, BirthDate, Gender)
+        {
         }
     }
 }
