@@ -15,5 +15,10 @@ namespace CreateClass
         {
             this.profession = profession;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + ", profession: " + profession;
+        }
     }
 }

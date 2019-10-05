@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CreateClass {
-    class CreateClass {
+    static class CreateClass {
         static void Main(string[] args) {
-            Person person = new Employee("János", 1992, Gender.Male);
+            Person person = new Employee("János", 1992, Gender.Male, "Janitor");
             Console.WriteLine(person);
 
             Console.ReadLine();
