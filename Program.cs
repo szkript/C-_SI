@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CreateClass {
     static class CreateClass {
         static void Main(string[] args) {
-            Person person = new Employee("János", 1992, Gender.Male, "Janitor");
+            Person person = new Employee("János", 1992, Gender.Male, "Janitor", 600);
             Console.WriteLine(person);
 
             Console.ReadLine();

@@ -8,17 +8,21 @@ namespace CreateClass
 {
     class Employee : Person
     {
-        private string profession;
-        Room room;
-
-        public Employee(string name, int birthDate, Gender gender, string profession) : base(name, birthDate, gender)
+        private readonly string _profession;
+        private readonly int _salary;
+        
+        public Employee(string name, int birthDate, Gender gender, string profession, int salary) : base(name, birthDate, gender)
         {
-            this.profession = profession;
+            _profession = profession;
+            _salary = salary;
         }
 
         public override string ToString()
         {
-            return base.ToString() + ", profession: " + profession;
+            return base.ToString() + ", profession: " + _profession
+                + ", Salary: " + _salary;
+            
+            
         }
     }
 }
