@@ -1,11 +1,16 @@
 ﻿namespace CreateClass {
     internal class Room
     {
-        public int RoomNumber { get; }
+        private int RoomNumber { get; }
 
         public Room(int roomNumber)
         {
-            this.RoomNumber = roomNumber;
+            RoomNumber = roomNumber;
+        }
+
+        public override string ToString()
+        {
+            return ",room number: " + RoomNumber.ToString();
         }
     }
 }

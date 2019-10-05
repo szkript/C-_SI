@@ -18,7 +18,7 @@ namespace CreateClass {
         }
 
         public override string ToString() {
-            return Name.ToString() + " , birth year: " + BirthDate.ToString() + ", gender: " + _gender.ToString();
+            return $"{Name} , birth year: {BirthDate}, gender: {_gender}";
         }
     }
     enum Gender {

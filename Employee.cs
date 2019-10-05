@@ -10,18 +10,19 @@ namespace CreateClass
     {
         private readonly string _profession;
         private readonly int _salary;
+        private Room _room;
         
-        public Employee(string name, int birthDate, Gender gender, string profession, int salary) : base(name, birthDate, gender)
+        public Employee(string name, int birthDate, Gender gender, string profession, int salary, int room) : base(name, birthDate, gender)
         {
             _profession = profession;
             _salary = salary;
+            _room = new Room(room);
         }
 
         public override string ToString()
         {
             return base.ToString() + ", profession: " + _profession
-                + ", Salary: " + _salary;
-            
+                   + ", Salary: " + _salary.ToString() +_room.ToString();
             
         }
     }
