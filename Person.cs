@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 namespace CreateClass {
     class Person {
         private string Name { get; set; }
-        private int BirthDate { get; set; }
+        private DateTime BirthDate { get; set; }
         private readonly Gender _gender;
 
-        protected Person(string name, int birthDate, Gender gender) {
-            this.Name = name;
-            this.BirthDate = birthDate;
-            this._gender = gender;
+        protected Person(string name, DateTime birthDate, Gender gender) {
+            Name = name;
+            BirthDate = birthDate;
+            _gender = gender;
+        }
 
+        public Person(string name, DateTime birthDate)
+        {
+            Name = name;
+            BirthDate = birthDate;
         }
 
         public override string ToString() {

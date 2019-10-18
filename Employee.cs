@@ -1,29 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CreateClass
 {
-    class Employee : Person
+    class Employee : Person, ICloneable
     {
         private readonly string _profession;
         private readonly int _salary;
         private Room _room;
-        
-        public Employee(string name, int birthDate, Gender gender, string profession, int salary, int room) : base(name, birthDate, gender)
+
+        public Employee(string name, DateTime birthDate, Gender gender, int salary, int room, string profession) : base(name, birthDate, gender)
         {
             _profession = profession;
             _salary = salary;
             _room = new Room(room);
         }
 
+        public Employee(string name, DateTime birthDate, int salary, string profession) : base(name, birthDate)
+        {
+            _profession = profession;
+            _salary = salary;
+        }
+
+        public object Clone()
+        {
+            Employee newEmployee = (Employee)this.MemberwiseClone();
+            newEmployee.Room = new Room(Room.Number);
+            return newEmployee;
+        }
+
+        public Room Room { get; internal set; }
+
         public override string ToString()
         {
             return base.ToString() + ", profession: " + _profession
-                   + ", Salary: " + _salary.ToString() +_room.ToString();
-            
+                   + ", Salary: " + _salary.ToString() + _room.ToString();
+
+        }
+
+        object ICloneable.Clone()
+        {
+            throw new NotImplementedException();
         }
     }
 }
