@@ -6,19 +6,24 @@ using System.Threading.Tasks;
 
 namespace CreateClass {
     class Person {
-        string Name;
-        int BirthDate;
-        Gender Gender;
+        private string Name { get; set; }
+        private DateTime BirthDate { get; set; }
+        private readonly Gender _gender;
 
-        public Person(string Name, int BirthDate, Gender Gender) {
-            this.Name = Name;
-            this.BirthDate = BirthDate;
-            this.Gender = Gender;
+        protected Person(string name, DateTime birthDate, Gender gender) {
+            Name = name;
+            BirthDate = birthDate;
+            _gender = gender;
+        }
 
+        public Person(string name, DateTime birthDate)
+        {
+            Name = name;
+            BirthDate = birthDate;
         }
 
         public override string ToString() {
-            return Name.ToString() + " , birth year: " + BirthDate.ToString() + ", gender: " + Gender.ToString();
+            return $"{Name} , birth year: {BirthDate}, gender: {_gender}";
         }
     }
     enum Gender {
