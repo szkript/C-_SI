@@ -37,9 +37,5 @@ namespace CreateClass
 
         }
 
-        object ICloneable.Clone()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
